@@ -7,10 +7,10 @@ import Modules from './Components/module/module'
 
 function App() {
   return (
-    <Nav />
+    // <Nav />
     // <Hero />
     // <Homepage />
-    // <Modules />
+    <Modules />
   );
 }
 
