@@ -11,10 +11,10 @@ const Homepage = () =>{
             <Nav />
 
             {/* hero photo */}
-            {/* <Hero /> */}
+            <Hero />
 
             {/* Top Modules */}
-            {/* <Modules /> */}
+            <Modules />
 
         </div>
         

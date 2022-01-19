@@ -9,6 +9,8 @@
     background-color: white;
     justify-content: center;
     padding-left: 10px;
+    width: 40%;
+    margin: auto;
 }
 
 .item{
@@ -26,7 +28,7 @@
     border: black;
 }
 
-li:hover{
+.item:hover{
     background-color: #5e5d5d; 
     /* can't change color w/o messing with padding*/
 }
