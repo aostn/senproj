@@ -9,8 +9,8 @@ function App() {
   return (
     // <Nav />
     // <Hero />
-    // <Homepage />
-    <Modules />
+    <Homepage />
+    // <Modules />
   );
 }
 
