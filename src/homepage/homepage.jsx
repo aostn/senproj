@@ -1,17 +1,20 @@
 import React from "react";
 import Nav from './Nav/nav';
 import Hero from './Hero/hero';
-// import Modules from './Components/module/module'
+import Modules from '../Components/module/module';
 
 const Homepage = () =>{
-    const modulesTitles = ['Module 1', 'Module 2', 'Module 3']
+    // const modulesTitles = ['Module 1', 'Module 2', 'Module 3']
     return(
         <div>
             {/* Nav*/}
             <Nav />
 
             {/* hero photo */}
-            <Hero />
+            {/* <Hero /> */}
+
+            {/* Top Modules */}
+            {/* <Modules /> */}
 
         </div>
         
