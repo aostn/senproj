@@ -2,7 +2,7 @@
     font-size: 20px;
     text-align: center;
     padding: 10px;
-    background-color: rgb(156, 218, 207);
+    background-color: rgb(182, 240, 229);
 }
 
 .itemsList{
@@ -33,7 +33,7 @@
 }
 
 .item:hover{
-    background-color: #888686; 
+    background-color: #cccccc; 
     transform: scale(1.15);
     /* can't change color w/o messing with padding*/
 }
