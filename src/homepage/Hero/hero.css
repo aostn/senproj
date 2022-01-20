@@ -1,3 +1,5 @@
-div{
-    margin: 0;
+.splash{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
