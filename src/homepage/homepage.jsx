@@ -2,6 +2,7 @@ import React from "react";
 import Nav from './Nav/nav';
 import Hero from './Hero/hero';
 import Modules from '../Components/module/module';
+import Discord from "./Discord/discord";
 
 const Homepage = () =>{
     // const modulesTitles = ['Module 1', 'Module 2', 'Module 3']
@@ -15,6 +16,9 @@ const Homepage = () =>{
 
             {/* Top Modules */}
             <Modules />
+
+            {/* Discord bot */}
+            <Discord />
 
         </div>
         
