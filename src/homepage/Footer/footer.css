@@ -1,0 +1,12 @@
+.footerSec{
+    background-color: #a9b9b4;
+    padding: 120px;
+    color: white;
+    bottom: 0px;
+}
+
+.randText{
+    text-align: center;
+    font-size: 18px;
+    padding: 0px;
+}
