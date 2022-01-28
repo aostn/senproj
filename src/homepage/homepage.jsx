@@ -6,12 +6,10 @@ import Discord from "./Discord/discord";
 import Footer from "./Footer/footer";
 
 const Homepage = () =>{
+    
     // const modulesTitles = ['Module 1', 'Module 2', 'Module 3']
     return(
         <div>
-            {/* Nav*/}
-            <Nav />
-
             {/* hero photo */}
             <Hero />
 
@@ -21,9 +19,6 @@ const Homepage = () =>{
             {/* Discord bot */}
             <Discord />
 
-            {/* Footer */}
-            <Footer />
-
         </div>
         
         //Cover photo
@@ -31,6 +26,6 @@ const Homepage = () =>{
         //Discord bot 
         //Footer
     )
-}
+};
 
 export default Homepage
