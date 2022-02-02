@@ -12,7 +12,7 @@ import { Router } from 'react-router-dom';
 const renderPath = () =>{
   if(window.location.pathname === '/'){
     return <Homepage />;
-  } else if (window.location.pathname === '/test'){
+  } else if (window.location.pathname === '/modules'){
     return <ModulesPage />;
   }
 }
