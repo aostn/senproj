@@ -1,4 +1,45 @@
 .modules-page{
     height: 100vh;
-    
+    display: flex;
 }
+
+.table-of-contents_container{
+    background-color: lightgrey;
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.modules__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.modules__header{
+    text-align: left
+}
+
+.modules__img{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.sub-topic__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-topic__text{
+    text-align: left
+}
+
+.sub-topic__img{
+    height: 300px;
+    width: 300px;
+    align-self: right;
+}
+
+
+
