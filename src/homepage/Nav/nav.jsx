@@ -7,16 +7,16 @@ const Nav = () =>{
 
     return(
         <nav className="main-nav">
-        <a hrref="/">
-            <img src={logo} className="logo" />
-        </a>
-        <ul className="navList">
-            <li className="navItem"><a href={homeOrModules ? "/modules":"/"}>{homeOrModules ? "Modules" : "Home"}</a></li>
-            <li className="navItem"><a href="#">Discord Bot</a></li>
-            <li className="navItem"><a href="#">Contact</a></li>
-            <li className="searchBox"><input type='text' placeholder="Search.."></input></li>
-        </ul>
-    </nav>
+            <a href="/"><img src={logo} className="nav-logo" /></a>
+            <div className>
+                <ul className="navList">
+                    <li className="navItem"><a href={homeOrModules ? "/modules":"/"}>{homeOrModules ? "Modules" : "Home"}</a></li>
+                    <li className="navItem"><a href="#">Discord Bot</a></li>
+                    <li className="navItem"><a href="#">Contact</a></li>
+                    <li className="searchBox"><input type='text' placeholder="Search.."></input></li>
+                </ul>
+            </div>
+        </nav>
     )
         
 };
