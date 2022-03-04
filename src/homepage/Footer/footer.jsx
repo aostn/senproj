@@ -16,6 +16,7 @@ const Footer = () =>{
             <div className="links">
                 <ul>
                     <li className="foot-link"><a href="#">About Us</a></li>
+                    <li className="foot-link"><a href="/modules">Modules</a></li>
                     <li className="foot-link"><a href="#">Discord Bot</a></li>
                     <li className="foot-link"><a href="#">Contact Us</a></li>
                     <li className="foot-link"><a href="#">Careers</a></li>
