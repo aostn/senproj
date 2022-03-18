@@ -7,7 +7,7 @@ const Nav = () =>{
 
     return(
         <nav className="main-nav">
-            <a href="/"><img src={logo} className="nav-logo" /></a>
+            <a href="/"><img src={logo} className="nav-logo" /></a> 
             <div className>
                 <ul className="navList">
                     <li className="navItem"><a href={homeOrModules ? "/modules":"/"}>{homeOrModules ? "Modules" : "Home"}</a></li>
