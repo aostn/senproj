@@ -6,6 +6,7 @@ import Modules from './Components/module/module'
 import Discord from './homepage/Discord/discord'
 import Footer from './homepage/Footer/footer'
 import ModulesPage from './ModulesPage/index'
+import AboutPage from './AboutPage';
 import { Router } from 'react-router-dom';
 
 
@@ -14,6 +15,8 @@ const renderPath = () =>{
     return <Homepage />;
   } else if (window.location.pathname === '/modules'){
     return <ModulesPage />;
+  } else if (window.location.pathname === '/about'){
+    return <AboutPage />;
   }
 }
  

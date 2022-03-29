@@ -1,0 +1,39 @@
+.main-container{
+    display: flex;
+    margin: 3%;
+    padding-left: 17%;
+    padding-right: 17%;
+    align-content: center;
+    flex-direction: column;
+}
+
+.title-1{
+    font-size: 280%;
+}
+
+.title-2, .title-3{
+    font-size: 240%;
+}
+
+
+.team-members{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.member {
+    display: flex;
+    width: 31%;
+    margin: 1% 1% 45px 1%;
+}
+
+.name {
+    position: absolute;
+    bottom: 0px;
+}
+
+.member img {
+    width: 100%;
+    display: block;
+}
