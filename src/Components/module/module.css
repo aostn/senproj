@@ -37,8 +37,15 @@
     background-size: 150%;
 }
 
+li:hover span {
+    display: none;
+  }
 
-.item li:hover{
+.item li:hover:after{
     background-color: #cccccc; 
     transform: scale(1.15);
+    
+    content: "Description!";
+    position: absolute;
+    
 }
