@@ -9,7 +9,7 @@ const TableOfContents = () =>{
         switch(activeModule){
             case 1:
                 return (
-                    <ul>
+                    <ul className="Content-item">
                         <li>Highs</li>
                         <li>Lows</li>
                     </ul>
@@ -18,7 +18,7 @@ const TableOfContents = () =>{
 
             case 2:
                 return(
-                    <ul>
+                    <ul className="Content-item">
                         <li>Stocks are cool</li>
                         <li>Dips</li>
                     </ul>
@@ -27,7 +27,7 @@ const TableOfContents = () =>{
 
             case 3:
                 return(
-                    <ul>        
+                    <ul className="Content-item">        
                         <li>AMC</li>
                         <li>Gamestop</li>
                     </ul>

@@ -6,8 +6,18 @@
 .table-of-contents_container{
     background-color: lightgrey;
     width: 20%;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 20px;
+    
+}
+
+.table-of-contents_header{
+    text-align: center;
+    font-size: 100%;
+}
+
+.Content-item{
+    text-align: center;
+    margin-right: 16px;
 }
 
 .modules__container{
@@ -16,7 +26,7 @@
 }
 
 .modules__header{
-    text-align: left
+    text-align: left;
 }
 
 .modules__img{
