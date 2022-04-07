@@ -11,7 +11,7 @@ const Nav = () =>{
             <div className>
                 <ul className="navList">
                     <li className="navItem"><a href={homeOrModules ? "/modules":"/"}>{homeOrModules ? "Modules" : "Home"}</a></li>
-                    <li className="navItem"><a href="#">Discord Bot</a></li>
+                    <li className="navItem"><a href="/discord">Discord Bot</a></li>
                     <li className="navItem"><a href="/about">About Us</a></li>
                     <li className="navItem"><a href="#">Contact</a></li>
                     <li className="searchBox"><input type='text' placeholder="Search.."></input></li>
