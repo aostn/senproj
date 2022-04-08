@@ -17,7 +17,8 @@
 
 .Content-item{
     text-align: center;
-    margin-right: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 .modules__container{
