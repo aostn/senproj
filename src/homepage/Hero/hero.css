@@ -1,8 +1,7 @@
-.hero-container {
+.hero_container {
     position: relative;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
   }
 
 .splash{
@@ -11,10 +10,9 @@
     display: flex;
     align-items: center;
     opacity: 0.85;
-    
 }
 
-.hero-caption {
+.hero_caption {
     position: absolute;
     font-size: 3rem;
     width: fit-content;
@@ -23,7 +21,7 @@
     transform: translate(-50%, -50%);
   }
 
-  .hero-caption {
+  .hero_caption {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */

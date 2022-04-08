@@ -1,15 +1,16 @@
 import react, {useState, useEffect} from "react";
+import modules from "./modules";
 import './index.css'
 
 const TableOfContents = () =>{
     const [activeModule, setActiveModule] = useState(0);
-
+    console.log(modules)
     const subtopics = () => {
 
         switch(activeModule){
             case 1:
                 return (
-                    <ul className="Content-item">
+                    <ul>
                         <li>Highs</li>
                         <li>Lows</li>
                     </ul>
@@ -18,7 +19,7 @@ const TableOfContents = () =>{
 
             case 2:
                 return(
-                    <ul className="Content-item">
+                    <ul>
                         <li>Stocks are cool</li>
                         <li>Dips</li>
                     </ul>
@@ -27,7 +28,7 @@ const TableOfContents = () =>{
 
             case 3:
                 return(
-                    <ul className="Content-item">        
+                    <ul>        
                         <li>AMC</li>
                         <li>Gamestop</li>
                     </ul>
