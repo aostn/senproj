@@ -8,8 +8,7 @@ const Discord = () =>{
             <header className="titleD">Try Out Our Discord Bot!</header>
             <p1 className="verbage" align="center">
                 <img src={disc} className="discIMG" align="left"/>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga, sequi eligendi nihil id maiores illum! Reiciendis sed repellendus deserunt sunt et modi? Delectus ab, aut esse nesciunt tenetur a?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga, sequi eligendi nihil id maiores illum! Reiciendis sed repellendus deserunt sunt et modi? Delectus ab, aut esse nesciunt tenetur a?
+                Want to try looking at stocks and charts? Use our Tickr Discord Bot to call stock charts and quotes directly into your personal private servers! 
             </p1>
         </div>
     )

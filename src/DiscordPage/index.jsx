@@ -6,7 +6,7 @@ const DiscordPage = () =>{
     
     return(
         <div>
-            <h1>This is the discord documentation page</h1>
+            <h1 className="disc-title">This is the discord documentation page</h1>
         </div>
         
     )
