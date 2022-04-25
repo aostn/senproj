@@ -5,6 +5,14 @@ import './index.css'
 const TableOfContents = () =>{
     const [activeModule, setActiveModule] = useState(0);
     console.log(modules)
+
+    const handleClick = (num) => {
+        
+        if(num === activeModule) setActiveModule(0)
+        setActiveModule(num);
+    }
+
+
     const subtopics = () => {
 
         switch(activeModule){
@@ -43,33 +51,15 @@ const TableOfContents = () =>{
         <div className="table-of-contents_container">
             <ul>
                 <h2 className="table-of-contents_header">Table of Contents</h2>
-                <li 
-                    onClick ={() => {
-                        setActiveModule(1);
-                        // subtopics(activeModule);
-                    }}
-                >
-                    Intro to Stocks
-                </li>
-                {activeModule === 1 ? subtopics(activeModule) : null}
-                <li 
-                    onClick ={() => {
-                        setActiveModule(2); 
-                        // subtopics(activeModule);
-                    }}
-                >
-                    Intro to Options
-                </li>
-                {activeModule === 2 ? subtopics(activeModule) : null}
-                <li 
-                    onClick ={() => {
-                        setActiveModule(3); 
-                        // subtopics(activeModule);
-                    }}
-                >
-                    Technical Analysis
-                </li>
-                {activeModule === 3 ? subtopics(activeModule) : null}
+
+                <li onClick ={() => {handleClick(1)}}>Intro to Stocks</li>
+                    {activeModule === 1 ? subtopics(activeModule) : null}
+
+                <li onClick ={() => {handleClick(2)}}>Intro to Options</li>
+                    {activeModule === 2 ? subtopics(activeModule) : null}
+
+                <li onClick ={() => {handleClick(2)}}>Technical Analysis</li>
+                    {activeModule === 3 ? subtopics(activeModule) : null}
             </ul>
         </div>
     );
