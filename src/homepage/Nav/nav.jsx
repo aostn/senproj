@@ -67,8 +67,9 @@ const Nav = () => {
     setAnchorElUser(null);
   };
 
+  
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: '#2E3B55'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -136,7 +137,8 @@ const Nav = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* USER PROFILE */}
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -164,7 +166,7 @@ const Nav = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

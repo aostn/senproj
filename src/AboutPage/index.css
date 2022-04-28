@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.header-bg{
+    /* background-color: rgb(221, 221, 221); */
+}
+
 .title-1{
     font-size: 280%;
     margin-left: 0px;
