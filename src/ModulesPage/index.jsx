@@ -2,68 +2,115 @@ import react, {useState, useEffect} from "react";
 import modules from "./modules";
 import './index.css'
 
-const TableOfContents = () =>{
-    const [activeModule, setActiveModule] = useState(0);
-    console.log(modules)
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { FixedSizeList } from 'react-window';
 
-    const handleClick = (num) => {
+function renderRow(props) {
+  const { index, style } = props;
+
+  return (
+    <div>
+        <ListItem style={style} key={index} component="div" disablePadding>
+            <ListItemButton>
+                <ListItemText primary={`Stock Overview` } style={{textAlign: 'center', borderBottom: 'solid',}} />
+            </ListItemButton>
+
+            {/* <ListItemButton>
+                <ListItemText primary={`Stock Options`} style={{textAlign: 'center', borderBottom: 'solid',}}/>
+            </ListItemButton>  
+
+            <ListItemButton>
+                <ListItemText primary={`Technical Analysis`} style={{textAlign: 'center', borderBottom: 'solid',}}/>
+            </ListItemButton>       */}
+        </ListItem>
+    </div>
+    
+  );
+}
+
+const TableOfContents = () => {
+  return (
+    <Box sx={{ width: '100%', height: 200, maxWidth: 250, bgcolor: 'background.paper', borderStyle: 'solid', margin: '2%'}}>
+        <FixedSizeList
+            height={200}
+            width={250}
+            itemSize={46}
+            itemCount={1}
+            overscanCount={5}
+            >
+            {renderRow}
+        </FixedSizeList>
+
+    </Box>
+  );
+}
+
+// const TableOfContents = () =>{
+//     const [activeModule, setActiveModule] = useState(0);
+//     console.log(modules)
+
+//     const handleClick = (num) => {
         
-        if(num === activeModule) setActiveModule(0)
-        setActiveModule(num);
-    }
+//         if(num === activeModule) setActiveModule(0)
+//         setActiveModule(num);
+//     }
 
 
-    const subtopics = () => {
+//     const subtopics = () => {
 
-        switch(activeModule){
-            case 1:
-                return (
-                    <ul>
-                        <li>Stocks</li>
-                        <li>Stock Rules</li>
-                    </ul>
-                );
+//         switch(activeModule){
+//             case 1:
+//                 return (
+//                     <ul>
+//                         <li>Stocks</li>
+//                         <li>Stock Rules</li>
+//                     </ul>
+//                 );
                 
 
-            case 2:
-                return(
-                    <ul>
-                        <li>Calls</li>
-                        <li>Puts</li>
-                    </ul>
-                );
+//             case 2:
+//                 return(
+//                     <ul>
+//                         <li>Calls</li>
+//                         <li>Puts</li>
+//                     </ul>
+//                 );
             
 
-            case 3:
-                return(
-                    <ul>        
-                        <li>EMA</li>
-                        <li>Most Common EMA</li>
-                    </ul>
-                );
+//             case 3:
+//                 return(
+//                     <ul>        
+//                         <li>EMA</li>
+//                         <li>Most Common EMA</li>
+//                     </ul>
+//                 );
             
-            default: console.log("default")
-        }
-    };
+//             default: console.log("default")
+//         }
+//     };
 
 
-    return(
-        <div className="table-of-contents_container">
-            <ul>
-                <h2 className="table-of-contents_header">Table of Contents</h2>
+//     return(
+//         <div className="table-of-contents_container">
+//             <ul>
+//                 <h2 className="table-of-contents_header">Table of Contents</h2>
 
-                <li onClick ={() => {handleClick(1)}}>Intro to Stocks</li>
-                    {activeModule === 1 ? subtopics(activeModule) : null}
+//                 <li onClick ={() => {handleClick(1)}}>Intro to Stocks</li>
+//                     {activeModule === 1 ? subtopics(activeModule) : null}
 
-                <li onClick ={() => {handleClick(2)}}>Intro to Options</li>
-                    {activeModule === 2 ? subtopics(activeModule) : null}
+//                 <li onClick ={() => {handleClick(2)}}>Intro to Options</li>
+//                     {activeModule === 2 ? subtopics(activeModule) : null}
 
-                <li onClick ={() => {handleClick(2)}}>Technical Analysis</li>
-                    {activeModule === 3 ? subtopics(activeModule) : null}
-            </ul>
-        </div>
-    );
-}
+//                 <li onClick ={() => {handleClick(2)}}>Technical Analysis</li>
+//                     {activeModule === 3 ? subtopics(activeModule) : null}
+//             </ul>
+//         </div>
+//     );
+// }
 
 const Module = () =>{
 
