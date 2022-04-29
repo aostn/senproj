@@ -45,7 +45,7 @@ import './nav.css'
 const pages = [ <a href="/modules" className="modules-tab">Modules</a>, 
                 <a href="/discord" className="modules-tab">Discord Bot</a>,
                 <a href="/about" className="modules-tab">About Us</a>,
-                <a href="/" className="modules-tab">Contact Us</a>];
+                <a href="/contact" className="modules-tab">Contact Us</a>];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Nav = () => {

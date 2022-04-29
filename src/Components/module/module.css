@@ -10,15 +10,22 @@
     background-color: white;
     text-align: center;
     padding: 30px;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .item1, .item2, .item3{
-    display: inline-block;
+    /* display: inline-block;
     border:2px solid #000;
     overflow: auto;
     padding: 30px;
     margin: 10px;
+    transform: all 1s; */
+
+    display: inline-block;
+    /* border: 2px solid #000; */
+    /* overflow: auto; */
+    padding: 30px;
+    /* margin: 10px; */
     transform: all 1s;
 }
 .item1 a, .item2 a, .item3 a{
@@ -38,7 +45,7 @@
 }
 
 
-.item li:hover{
+.module-box li:hover{
     background-color: #cccccc; 
-    transform: scale(1.15);
+    transform: scale(1.10);
 }
