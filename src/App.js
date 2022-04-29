@@ -7,6 +7,7 @@ import Footer from './homepage/Footer/footer'
 import ModulesPage from './ModulesPage/index'
 import AboutPage from './AboutPage';
 import DiscordPage from './DiscordPage';
+import ContactPage from './ContactPage';
 import { Router } from 'react-router-dom';
 
 
@@ -19,6 +20,8 @@ const renderPath = () =>{
     return <AboutPage />;
   } else if (window.location.pathname === '/discord'){
     return <DiscordPage />;
+  } else if (window.location.pathname === '/contact'){
+    return <ContactPage />;
   }
 }
  

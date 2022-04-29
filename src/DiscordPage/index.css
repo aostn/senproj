@@ -2,3 +2,88 @@
     display: flex;
     
 }
+
+h1{
+    display: flex;
+    margin-left: 3%;
+}
+
+p{
+    margin-left: 3%;
+}
+
+.DiscordPageTitle{
+    display: flex;
+    /* margin-left: 3%; */
+}
+
+.TickrBot{
+    margin: 2%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tickrDescription{
+    font-size: 20px;
+}
+
+.tickrBotFeature{
+    font-weight: bold;
+    /* margin-left: 15%; */
+}
+
+.tickrFeatures{
+    display: flex;
+    margin-left: 3%;
+}
+
+.tickr-commands{
+    display: flex;
+    margin-left: 3%;
+}
+
+.tickrCmdTitle{
+    display: flex;
+    margin-left: 3%;
+}
+
+.CmdTable{
+    display: flex;
+    margin-left: 3%;
+}
+
+.tickrChangelogTitle{
+    display: flex;
+    margin-left: 3%;
+}
+
+.changelogDesc{
+    display: flex;
+    margin-left: 3%;
+}
+
+.tickrChangelogHow{
+    display: flex;
+    margin-left: 3%;
+}
+
+.changelog{
+    /* display: flex; */
+    justify-content:space-evenly;
+    margin-left: 3%;
+    width: 33%
+}
+
+.CommandTable{
+    /* display: flex; */
+    margin-left: 3%;
+    width: 50%
+}
+
+.tickrFeatureList{
+    /* display: flex; */
+    margin-left: 3%;
+    width: 50%
+}
+

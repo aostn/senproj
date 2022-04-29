@@ -1,0 +1,63 @@
+h1{
+    display: flex;
+    margin-left: 3%;
+}
+
+p{
+    margin-left: 3%;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+
+.ContactForm{
+    margin-left: 3%;
+}
+
+.ContactFormTitle{
+    margin-left: 3%;
+}
+
+/* .ContactPage{ 
+}
+
+.ContagePageMain{
+
+}
+
+.ContactUsTitle{
+
+}
+
+.ContactDesc{
+
+}
+
+.ContactPageInfo{
+
+}
+
+.individContact{
+
+}
+
+.individContactTitle{
+
+}
+
+.individContactList{
+
+} */
