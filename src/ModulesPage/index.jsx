@@ -8,8 +8,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { FixedSizeList } from 'react-window';
 
-
-
 const RenderRow = ({module}) => {
 
     const [showSubTopic, setShowSubTopic] = useState(false);
@@ -102,10 +100,14 @@ const ModulesPage = () => {
     return(
         <div className="modules-page">
             <TableOfContents />
-            {/* <div className="content">
-                <Module />
-                <SubTopic />
-            </div> */}
+            <div className="modules-content">
+                {/* <div className="content">
+                    <Module />
+                    <SubTopic />
+                </div> */}
+                
+            </div>
+            
             
         </div>
     );

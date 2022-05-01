@@ -46,6 +46,54 @@ const modules = [
     
                 }
             ]
+        },
+
+        {
+            id: 4,
+            title: "Support and Resistance",
+            description: "Support is a price level where a downtrend can be expected to bounce due to a concentration of demand or buying interest. As the price of assets or securities drops, demand for the shares increases, thus forming the support line. Once an area of support has been identified, those price levels can serve as potential entry or exit points because as price reaches a point of support, it will do one of two things: bounce back away from the support, or violate the price level and continue in its direction until it hits the next support level. Support levels act as high probability areas where buyers want to buy the asset. For this reason purchasing an asset at this level is the best “bang for your buck.” Since everyone else wants to buy the asset in this area, there is a high probability the key level you identified will act as a bottom.",
+            subtopics: [
+                {
+                    title: "How to chart support",
+                    description: "Charting support is very simple as it's basically drawing all the low points that the price of the stock has made. As seen in the figure below, price respected the support level and bounced every time it touched support."
+                },
+                {
+                    title: "Entry and Exit",
+                    description: "Enter long (calls) after the price has bounced off of support. This basically means you’re catching the bottom of the price. Always use your other indicators and wait for confirmation of bounce off support level. By entering long at a support level, you can potentially catch the reversal moving up."
+                },
+                {
+                    title: "Trendlines",
+                    description: "Support can be either horizontal or diagonal. Draw trendlines with support at the lows."
+                },
+                {
+                    title:"Resistance",
+                    description: "Resistance is a price level where an uptrend can be expected to reject due to a concentration of supply or selling interest. As the price of assets or securities increase, supply for the shares decreases, thus forming the resistance line. Once an area or point of resistance has been identified, those price levels can serve as potential entry or exit points because as a price reaches a point of resistance it will do one of two things: bounce back away from the resistance, or violate the price level and continue in its direction–until it hits the next resistance level. Resistance levels act as high probability areas where sellers want to sell the asset. For this reason, purchasing an asset at this level is extremely risky as this can be considered a potential top. Since everyone else wants to sell the asset in this area, there is a high probability that the key level identified will act as a top."
+                },
+                {
+                    title: "How to chart resistance",
+                    description: "To chart resistance, draw all the high points (the highs of a stock) that the stock’s price has made. As seen in the figure below, the price respected the resistance level and rejected every time it touched resistance."
+                }
+            ]
+        },
+
+        {
+            id: 5,
+            title: "Supply and Demand",
+            description: "Two types of markets: Balanced - Market participants are agreeing on a price. There is an equilibrium between buyers and sellers which creates massive liquidity (sideways/consolidation). Imbalance - Market participants are not agreeing on a price. Demand exceeds supply or supply exceeds demand. This creates an illiquid area of price since all the orders were in favor of the sellers or buyers.",
+            subtopics: [
+                {
+                    title: "Supply",
+                    description: "A supply zone is the specific price range where sellers want to sell/short the security. More specifically big institutions that control market movements. Price in a market only moves because of two reasons - it is important to understand the auction process and how it works. If you have supply > demand, you may have a massive drop imbalance and there will be unfilled orders sitting at the origin location that did not get filled the first time since the price fell too quickly. In the above example, the price had a massive drop imbalance because supply (sellers) exceeded demand (buyers) thus leaving over unfilled sell orders in the origin location. This creates an overhead level of supply where looming sell orders exist. When the price revisits the same level where the origin imbalance was created, the unfilled sell orders begin getting filled. This makes supply zomes inherent resistance levels where price will struggle to get above - since supply exceeds demand. These levels are broader than a resistance line, however very similar. The only difference is that zones encompass a larger area. Imagine supply zones as large resistance areas with a huge concentration of sellers."
+                },
+                {
+                    title: "How to chart supply",
+                    description: "The best way to find supply zones is to look at the candlestick chart. Here is the order of things to do to spot supply zones: Look at the chart and try to spot a massive drop imbalance. It is important that the price moves a lot. Establish the base (beginning) from which price started the quick move. Usually, before a large move, you have a small sideways move- that is where your supply zone is. The areas above show a basing period for the stock, then a steep move to the downside. These are the exact things we are looking for to identify supply. Price needs to be balanced for a period of time (consolidating), then have a massive drop imbalance which signifies that sell orders will be leftover in the origin location."
+                },
+                {
+                    title: "Demand",
+                    description: "A demand zone is the specific price range where buyers want to buy/long the security. If you have demand > supply, you may have a massive rally imbalance and there will be unfilled orders at the origin location that did not get filled the first time since the price rose too fast. In this example, the price had a massive rally imbalance because demand (buyers) exceeded supply (sellers) leaving unfilled buy orders in the origin location. This creates a level of demand where looming buy orders exist. When the price revisits the same level where the origin imbalance was created, the unfilled buy orders begin getting filled. This makes demand zones inherent support levels where prices will likely bottom - since demand exceeded supply. These levels are broader than a support line, however very similar. The only difference is that zones encompass a larger area. Imagine demand zones as large support areas with a huge concentration of buyers.   "
+                }
+            ]
         }
 ];
 

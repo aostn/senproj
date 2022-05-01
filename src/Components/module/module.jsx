@@ -89,8 +89,9 @@ export default function SpacingGrid() {
                             backgroundColor: (theme) =>
                                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
                             }}
+                            className="item1"
                         >
-                            <li className="item1"><a href="/modules"><h3>Module 1:</h3> {modules.module1.title}</a></li>
+                            <li className="item1"><a href="/modules"><h3>Module 1:</h3> {module.title}</a></li>
                         </Paper>
                     </Grid>
                     <Grid key={1} item className="module-box">
@@ -101,8 +102,9 @@ export default function SpacingGrid() {
                             backgroundColor: (theme) =>
                                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
                             }}
+                            className="item2"
                         >
-                            <li className="item2"><a href="/modules"><h3>Module 2:</h3> {modules.module2.title}</a></li>
+                            <li className="item2"><a href="/modules"><h3>Module 2:</h3> {module.title}</a></li>
                         </Paper>
                     </Grid>      
                     <Grid key={2} item className="module-box">
@@ -113,8 +115,9 @@ export default function SpacingGrid() {
                             backgroundColor: (theme) =>
                                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
                             }}
+                            className="item3"
                         >
-                            <li className="item3"><a href="/modules"><h3>Module 3:</h3> {modules.module3.title}</a></li>
+                            <li className="item3"><a href="/modules"><h3>Module 3:</h3> {module.title}</a></li>
                         </Paper>
                     </Grid>              
                 </Grid>
