@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.modules-content{
+    height: 100vh;
+}
+
 .table-of-contents_container{
     background-color: lightgrey;
     width: 30%;
