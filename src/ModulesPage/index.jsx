@@ -50,6 +50,23 @@ const TableOfContents = () => {
     );
 }
 
+// const Module = () =>{
+
+//     // next, prev
+//     // router.push(/1)
+
+//     const moduleId = window.location.pathname;
+//     return(
+//         <div className="modules__container">
+//             {/* <h1 className='modules__header'>Modules.id[1]</h1> */}
+//             <h1 className='modules__header'>{modules.module3.title}</h1>
+//             <p className='modules__text'>{modules.module3.description}</p>
+//             <img className='modules__img'src="https://media.istockphoto.com/photos/close-up-business-people-meeting-to-discuss-the-situation-on-the-picture-id1089222846?k=20&m=1089222846&s=612x612&w=0&h=pxRm90xIK-0ozE0GpjPThDBbx0KXgdW3BnCsZDRLFh4=" alt="" />
+            
+//         </div>
+//     );
+// };
+
 const Module = () =>{
 
     // next, prev
@@ -59,13 +76,15 @@ const Module = () =>{
     return(
         <div className="modules__container">
             {/* <h1 className='modules__header'>Modules.id[1]</h1> */}
-            <h1 className='modules__header'>{modules.module3.title}</h1>
-            <p className='modules__text'>{modules.module3.description}</p>
+            <h1 className='modules__header'>{moduleId[1].title}</h1>
+            <p className='modules__text'>{moduleId[1].description}</p>
             <img className='modules__img'src="https://media.istockphoto.com/photos/close-up-business-people-meeting-to-discuss-the-situation-on-the-picture-id1089222846?k=20&m=1089222846&s=612x612&w=0&h=pxRm90xIK-0ozE0GpjPThDBbx0KXgdW3BnCsZDRLFh4=" alt="" />
             
         </div>
     );
 };
+
+
 
 const SubTopic = () => (
     <div className="sub-topic__container">
@@ -101,6 +120,7 @@ const ModulesPage = () => {
         <div className="modules-page">
             <TableOfContents />
             <div className="modules-content">
+                <Module />
                 {/* <div className="content">
                     <Module />
                     <SubTopic />

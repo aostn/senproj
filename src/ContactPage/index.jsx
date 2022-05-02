@@ -49,8 +49,8 @@ const ContactPage = () =>{
                 <br /><strong></strong>
               </p>
           </div>
-
-          <div className="ContactPageInfo">
+        <div className="ContactSection">
+        <div className="ContactPageInfo">
             <Box sx={{ ...commonStyles, width: '100%', maxWidth: 360, bgcolor: 'background.paper', borderRadius: '8px', borderColor: "grey.100"}}>
                     <List>
                       <ListItem disablePadding>
@@ -95,10 +95,12 @@ const ContactPage = () =>{
 
           <br /><br />
 
-          <div className="individContact">
+        </div>
+        <div className="individContact">
             <h2 className="individContactTitle">Contact Information</h2>
-          </div>
-          
+        </div>
+
+        <div className="ContactSection">
           <div className="individContactList">
             <Box sx={{ ...commonStyles, borderRadius: '8px', borderColor: "grey.100"}}>
             <Accordion>
@@ -181,57 +183,62 @@ const ContactPage = () =>{
               </Box>
               <br />
             </div>
-
-            <div className="ContactFormTitle">
-            <h2 >Contact Form</h2>
-            </div>
-            <div className="ContactForm">
-              <Box
-                  component="form"
-                  sx={{
-                    '& .MuiTextField-root': { m: 1, width: '40%' },
-                  }}
-                  noValidate
-                  autoComplete="off"
-                >
-                  <br />
-                  <div>
-                    <TextField
-                      id="outlined-multiline-flexible"
-                      label="Name"
-                      multiline
-                      maxRows={4}
-                      defaultValue="Ben Dover"
-                    />
-                    <br />
-                    <TextField
-                      id="outlined-textarea"
-                      label="Email"
-                      placeholder="Placeholder"
-                      multiline
-                      defaultValue="bendover@xtrahotmail.com"
-                    />
-                    <br />
-                    <TextField
-                      id="outlined-multiline-static"
-                      label="Message"
-                      multiline
-                      rows={7}
-                      defaultValue="Type your message here..."
-                    />
-                  </div>
-                  <br />
-                </Box>
-                <div>
-              <Stack direction="row" spacing={3}>
-                <Button variant="contained" endIcon={<SendIcon />}>
-                  Send
-                </Button>
-              </Stack>
-            </div>
-            </div>
-            <br />
         </div>
+          
+        <div className="ContactFormTitle">
+          <h2 >Contact Form</h2>
+        </div>
+
+        <div className="ContactSection">
+              <div className="ContactForm">
+                <Box
+                    component="form"
+                    sx={{
+                      '& .MuiTextField-root': { m: 1, width: '40%' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                  >
+                    <br />
+                    <div className="ContactField">
+                      <TextField
+                        id="outlined-multiline-flexible"
+                        label="Name"
+                        multiline
+                        maxRows={4}
+                        defaultValue="Ben Dover"
+                      />
+                      <br />
+                      <TextField
+                        id="outlined-textarea"
+                        label="Email"
+                        placeholder="Placeholder"
+                        multiline
+                        defaultValue="bendover@xtrahotmail.com"
+                      />
+                      <br />
+                      <TextField
+                        id="outlined-multiline-static"
+                        label="Message"
+                        multiline
+                        rows={7}
+                        defaultValue="Type your message here..."
+                      />
+                    </div>
+                    <br />
+                  </Box>
+                  <div>
+                <Stack direction="row" spacing={3}>
+                  <Button variant="contained" endIcon={<SendIcon />}>
+                    Send
+                  </Button>
+                </Stack>
+              </div>
+              </div>
+              <br />
+          </div>
+        </div>
+            
     )
     
 };
