@@ -65,10 +65,10 @@ const DiscordPage = () =>{
         <div className="DiscordPage">
          <div className="TickrBot">
             <h1 className="DiscordPageTitle">Tickr Discord Bot</h1>
-            <p className="tickrDescription">Tickr Bot is a helpful tool to help you learn about the stock market! Our bot provides the most up-to-date data on the market using FinViz APIs. Our bot provides our users with an intuitive and user-friendly experience that can be used on any Discord server! <br />
+            <p className="tickrDescription">Tickr Bot is a helpful tool to help you learn about the stock market! Our bot provides the most up-to-date data on the market using FinViz APIs. Our bot provides our users with an intuitive and user-friendly experience that can be used on any Discord server! Below you can find the information on how to install our bot, the commands, and each of the updates our bot has received. If there are any questions about our bot feel free to contact us and let us know!<br />
                 {/* <br /><strong>Our current features for the bot:</strong> */}
               </p>
-              <p className="tickrBotFeature">Our current features for the bot:</p>
+              <h3 className="tickrBotFeature">Our current features for the bot:</h3>
           </div>
 
           <div className="tickrFeatureList">

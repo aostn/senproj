@@ -1,15 +1,12 @@
+.DiscordPage{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
 .disc-title{
     display: flex;
     
-}
-
-h1{
-    display: flex;
-    margin-left: 3%;
-}
-
-p{
-    margin-left: 3%;
 }
 
 .DiscordPageTitle{
@@ -19,13 +16,14 @@ p{
 
 .TickrBot{
     margin: 2%;
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     flex-direction: column;
 }
 
 .tickrDescription{
-    font-size: 20px;
+    font-size: 16px;
+    /* margin-left: 3%; */
 }
 
 .tickrBotFeature{
@@ -33,37 +31,7 @@ p{
     /* margin-left: 15%; */
 }
 
-.tickrFeatures{
-    display: flex;
-    margin-left: 3%;
-}
-
-.tickr-commands{
-    display: flex;
-    margin-left: 3%;
-}
-
-.tickrCmdTitle{
-    display: flex;
-    margin-left: 3%;
-}
-
-.CmdTable{
-    display: flex;
-    margin-left: 3%;
-}
-
-.tickrChangelogTitle{
-    display: flex;
-    margin-left: 3%;
-}
-
-.changelogDesc{
-    display: flex;
-    margin-left: 3%;
-}
-
-.tickrChangelogHow{
+.tickrFeatures, .tickrCmdTitle, .tickr-commands, .CmdTable, .tickrChangelogTitle, .changelogDesc, .tickrChangelogHow{  
     display: flex;
     margin-left: 3%;
 }
@@ -72,18 +40,20 @@ p{
     /* display: flex; */
     justify-content:space-evenly;
     margin-left: 3%;
-    width: 33%
+    width: 90%
 }
 
 .CommandTable{
     /* display: flex; */
-    margin-left: 3%;
+    margin-left: 25%;
+    margin-right: 25%;
     width: 50%
 }
 
 .tickrFeatureList{
     /* display: flex; */
-    margin-left: 3%;
+    margin-left: 32%;
+    /* margin-right: 25%; */
     width: 50%
 }
 
