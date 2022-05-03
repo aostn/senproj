@@ -1,14 +1,10 @@
 .main-container{
     display: flex;
     margin: 3%;
-    padding-left: 17%;
-    padding-right: 17%;
+    padding-left: 13%;
+    padding-right: 13%;
     align-content: center;
     flex-direction: column;
-}
-
-.header-bg{
-    /* background-color: rgb(221, 221, 221); */
 }
 
 .title-1{
@@ -19,7 +15,6 @@
 .title-2, .title-3{
     font-size: 240%;
 }
-
 
 .team-members{
     position: relative;

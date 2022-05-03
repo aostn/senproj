@@ -1,36 +1,54 @@
-import react, {useState, useEffect} from "react";
+import react, {useState, useEffect, useRef} from "react";
 import modules from "./modules";
 import './index.css'
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import { FixedSizeList } from 'react-window';
 
-const RenderRow = ({module}) => {
+const RenderRow = ({module, setModuleToShow, setShowModuleCompoenent}) => {
 
-    const [showSubTopic, setShowSubTopic] = useState(false);
+    // const [showSubTopic, setShowSubTopic] = useState(false);
+    
 
-    const handleClick = () =>{
-        setShowSubTopic(!showSubTopic);
-    }
+    // const handleClick = () =>{
+    //     setShowSubTopic(!showSubTopic);
+    // }
+
+    const scrollTo = (el) => {
+        let element = document.getElementById(el);
+        element.scrollIntoView({behavior : "smooth"});
+
+        
+    };
+
+    const handleTitleClick = () =>{
+        setModuleToShow(module);
+        setShowModuleCompoenent(true);
+    };
+
+    const handleSubTopicClick = (el) =>{
+        setModuleToShow(module);
+        setShowModuleCompoenent(true);
+        setTimeout(() => scrollTo(el), 150);
+    };
 
     return (
-        <div>
-            <li onClick={handleClick}>{module.title}</li>
-            {showSubTopic && 
+        <div className="modules-nav__items">
+            <li className="modules-nav__title" onClick={handleTitleClick}>{
+                module.title}
+            </li>
             <ol>
                 {module.subtopics.map(subtopic => (
-                    <li>{subtopic.title}</li>
+                    <li className="modules-nav__subtopic-title" onClick={() => handleSubTopicClick(subtopic.title)}>
+                        {subtopic.title}
+                    </li>
                 ))}
             </ol>
-            }
+            
         </div>
     );
 }
 
-const TableOfContents = () => {
+const TableOfContents = ( {setModuleToShow,setShowModuleCompoenent}) => {
 
     return (
         <Box sx={{ width: '100%', 
@@ -43,88 +61,118 @@ const TableOfContents = () => {
                 }}>
                 <ul>
                     {modules.map(module => (
-                    <RenderRow module={module}/>
+                    <RenderRow 
+                        module={module} 
+                        setModuleToShow={setModuleToShow} 
+                        setShowModuleCompoenent={setShowModuleCompoenent}
+                        
+                    />
                     ))}</ul>
 
         </Box>
     );
 }
 
-// const Module = () =>{
+const Module = ({module}) =>{
+    const {hasList} = module;
+    if(!module) return;
 
-//     // next, prev
-//     // router.push(/1)
-
-//     const moduleId = window.location.pathname;
-//     return(
-//         <div className="modules__container">
-//             {/* <h1 className='modules__header'>Modules.id[1]</h1> */}
-//             <h1 className='modules__header'>{modules.module3.title}</h1>
-//             <p className='modules__text'>{modules.module3.description}</p>
-//             <img className='modules__img'src="https://media.istockphoto.com/photos/close-up-business-people-meeting-to-discuss-the-situation-on-the-picture-id1089222846?k=20&m=1089222846&s=612x612&w=0&h=pxRm90xIK-0ozE0GpjPThDBbx0KXgdW3BnCsZDRLFh4=" alt="" />
-            
-//         </div>
-//     );
-// };
-
-const Module = () =>{
-
-    // next, prev
-    // router.push(/1)
-
-    const moduleId = window.location.pathname;
     return(
         <div className="modules__container">
-            {/* <h1 className='modules__header'>Modules.id[1]</h1> */}
-            <h1 className='modules__header'>{moduleId[1].title}</h1>
-            <p className='modules__text'>{moduleId[1].description}</p>
-            <img className='modules__img'src="https://media.istockphoto.com/photos/close-up-business-people-meeting-to-discuss-the-situation-on-the-picture-id1089222846?k=20&m=1089222846&s=612x612&w=0&h=pxRm90xIK-0ozE0GpjPThDBbx0KXgdW3BnCsZDRLFh4=" alt="" />
-            
+            <h1 className='modules__header'>{module.title}</h1>
+            <p className='modules__text'>{module.description}</p>
+
+            {module?.subtopics.map((subtopic) => 
+                (<SubTopic subTopic={subtopic} hasList={module.hasList}/>
+            ))}
+
+            {hasList && (
+                <div>
+                    <h3>Key Takeaways</h3>
+                    <ol>
+                        {module?.takeaways?.map((takeaway) => <li>{takeaway}</li>)}
+                    </ol>
+                </div>
+            )}
+            {/* {hasList  ?? (
+                <div>
+                    <h3 className="subtopic__list-title">Key Takeaways</h3>
+                    <ul>
+                        {module.subTopic?.takeaways?.map((takeaway) => (
+                            <li>{takeaway}</li>
+                        ))}
+                    </ul>
+                </div>
+            )} */}
         </div>
     );
 };
 
 
 
-const SubTopic = () => (
-    <div className="sub-topic__container">
-        {/* <h2>{modules.module1.subtopic.subTopic1}</h2> */}
-        <h2 className="sub-topic-header">{modules.module3.subtopic1.subTitle}</h2> 
-        <p className="sub-topic__text">{modules.module3.subtopic1.subDescription}</p>
-        <img className="sub-topic__img" src="https://www.fidelity.com/bin-public/060_www_fidelity_com/images/LC/EMA_602x345.png" alt="" />
-        <h3>Key Take Aways</h3>
-        <p className = "key-takes">
-            <ul className="key-list">
-                <li>Exponential moving averages are designed to see price trends over specific time frames such as 50 or 200 days.</li>
-                <li>Compared to simple moving averages, EMAs give greater weight to recent (more relevant) data.</li>
-                <li>Computing the exponential moving average involves applying a multiplier to the SMA (simple moving average).</li>
-                <li>Moving average ribbons allow traders to see multiple EMAs at the same time.</li>
-                <li>EMA positioning varies on time frames (The bigger the time frame, the more important the level).</li>
-            </ul>
-        </p>
-        <h2 className="sub-topic-header">{modules.module3.subtopic2.subTitle}</h2> 
-        <p className="sub-topic__text">{modules.module3.subtopic2.subDescription}</p>
-        <img className="sub-topic__img" src="https://www.investopedia.com/thmb/DF6YOUYxTcCK3LDl4NITK0al8fI=/1536x868/filters:no_upscale():max_bytes(150000):strip_icc()/GoldenCross-5c6592b646e0fb0001a91e29.png" alt="" />
+const SubTopic = ({subTopic, hasList}) => {
 
-    </div>
-);
+    console.log(subTopic)
+    
+
+    return(
+        <div className="sub-topic__container" id={subTopic.title}>
+            <h2 className="subtopic__title">{subTopic.title}</h2>
+            <p className="subtopic__text">{subTopic.description}</p>
+
+            
+
+            {subTopic.image ?? (
+
+                <div>
+                    {subTopic?.images?.map(image => 
+                        <div>
+                            <img src={image}/>
+                            {image.caption ?? <p>{image.caption}</p>}    
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+};
 
 // const  testModules = () => {
 //     modules.forEach((module) => console.log(module.title));
 // };
 
+const ModulesWelcomePage = () =>(
+    <div>
+        <h1>Welcome to the Learning Modules Section</h1>
+        <p>
+            We offer a number of leanring modules. Please select one from the side menue to being your stock learning journey.
+        </p>
+        <p>
+            We recommend starting with these 3 modules
+        </p>
+    </div>
+)
+
 console.log(modules);
 
 const ModulesPage = () => {
+    const [showModuleComponent, setShowModuleCompoenent] = useState(false);
+    const [moduleToShow , setModuleToShow] = useState(null);
+    const subTopicRef = useRef(null);
+ 
     return(
         <div className="modules-page">
-            <TableOfContents />
+            <TableOfContents 
+                setModuleToShow={setModuleToShow} 
+                setShowModuleCompoenent={setShowModuleCompoenent}
+                subTopicRef={subTopicRef}
+            />
             <div className="modules-content">
-                <Module />
-                {/* <div className="content">
-                    <Module />
-                    <SubTopic />
-                </div> */}
+                <div classnName="content">
+                    {showModuleComponent ? 
+                        <Module module={moduleToShow} /> : <ModulesWelcomePage />
+                    }
+                </div>
                 
             </div>
             

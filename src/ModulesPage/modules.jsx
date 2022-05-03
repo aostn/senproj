@@ -4,22 +4,31 @@ const modules = [
             id: 1,
             title: "What are Stocks?",
             description: "Stocks are shares that an individual buys that represent having a piece of divided ownership of a corporation. A single share of stock can grow or decrease in value depending on the corporation’s assets and profits . Individuals may buy/sell stocks. A collection of shares is referred to as a “stock”. These stocks are publicly available and can be bought through brokerages.",
+            hasList: false,
             subtopics: [
                 {
                     title: "Supply and Demand Law",
                     description: "The law of supply and demand is a theory that explains how the market is controlled by buyers and sellers interactions with a stock. The price of a stock is determined by the willingness of people to buy or sell that share."
                 }
-            ]
+            ],
+            images: "something"
         },
 
         {
             id: 2,
             title: "What are Options?",
             description: "Options are a contract in which the buyer has a chance to buy or sell shares of a corporation. Owners of option contracts are not required to buy or sell the shares in the contract. Option contracts have due dates where the buyer must decide whether to exercise their option. Option contracts hold value that changes with higher volatility than stocks. The stated price on an option is the strike price. A buyer bets on whether a share price will go up or down by the expiration date.",
+            hasList: true,
+            takeaways: [
+                "Exponential moving averages are designed to see price trends over specific time frames such as 50 or 200 days.",
+                "Compared to simple moving averages, EMAs give greater weight to recent (more relevant) data.",
+                "Computing the exponential moving average involves applying a multiplier to the SMA (simple moving average)."
+            ],
             subtopics: [
                 {
                     title: "Calls",
                     description: "A call option is a contract that gives the buyer the right to buy a certain amount of shares at a specified price within a specified time. The buyer is not obligated to purchase the stocks. It is essentially betting a stock will rise in price by the expiration date.",
+                    
                 },
                 {
                     title: "Puts",
@@ -34,6 +43,7 @@ const modules = [
             id: 3,
             title: "Technical Analysis",    
             description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus necessitatibus pariatur quod cum, neque deleniti dignissimos reprehenderit dolores ab alias iusto beatae tenetur minus ipsum ullam deserunt voluptas nihil.",
+            hasList: false,
             subtopics: [
                 {
                     title: "EMA",
@@ -52,6 +62,7 @@ const modules = [
             id: 4,
             title: "Support and Resistance",
             description: "Support is a price level where a downtrend can be expected to bounce due to a concentration of demand or buying interest. As the price of assets or securities drops, demand for the shares increases, thus forming the support line. Once an area of support has been identified, those price levels can serve as potential entry or exit points because as price reaches a point of support, it will do one of two things: bounce back away from the support, or violate the price level and continue in its direction until it hits the next support level. Support levels act as high probability areas where buyers want to buy the asset. For this reason purchasing an asset at this level is the best “bang for your buck.” Since everyone else wants to buy the asset in this area, there is a high probability the key level you identified will act as a bottom.",
+            hasList: false,
             subtopics: [
                 {
                     title: "How to chart support",
@@ -80,6 +91,7 @@ const modules = [
             id: 5,
             title: "Supply and Demand",
             description: "Two types of markets: Balanced - Market participants are agreeing on a price. There is an equilibrium between buyers and sellers which creates massive liquidity (sideways/consolidation). Imbalance - Market participants are not agreeing on a price. Demand exceeds supply or supply exceeds demand. This creates an illiquid area of price since all the orders were in favor of the sellers or buyers.",
+            hasList: false,
             subtopics: [
                 {
                     title: "Supply",
