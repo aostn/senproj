@@ -94,16 +94,6 @@ const Module = ({module}) =>{
                     </ol>
                 </div>
             )}
-            {/* {hasList  ?? (
-                <div>
-                    <h3 className="subtopic__list-title">Key Takeaways</h3>
-                    <ul>
-                        {module.subTopic?.takeaways?.map((takeaway) => (
-                            <li>{takeaway}</li>
-                        ))}
-                    </ul>
-                </div>
-            )} */}
         </div>
     );
 };

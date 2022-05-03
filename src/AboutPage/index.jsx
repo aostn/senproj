@@ -22,12 +22,19 @@ const AboutPage = () =>{
                         Stock market information already exists everywhere. 
                         However, self-learning everything about the market can be too much for new users as they have no guidance on where to 
                         start or know what information is relevant to them. We set ourselves apart by having learning modules that will guide a user 
-                        through what they need to know and what they want to learn more about. We aim to educate the user in a way where their 
+                        through what they need to know and what they want to learn more about. <br /> <br />We aim to educate the user in a way where their 
                         learning is tailored to their needs. The tools we offer will be revolutionary as they will all be in one space rather 
                         than spread out across the internet like a scavenger hunt. We will bring everything that one needs to further their 
                         knowledge under a holistic setting using new technologies such as a Discord bot. Our website will aim to serve as an all-in-one 
                         learning tool for anyone who is interested in the stock market.
                     </p>
+                </div>
+
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
                 
 
@@ -41,23 +48,30 @@ const AboutPage = () =>{
                     online access. In addition to the dedicated website, a Discord bot will also be programmed in order to act as an accompanying 
                         tool to help novice investors.
                 </p>
+                
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
 
                 <h2 className="title-3">Meet the Team!</h2>
                 <div className="team-members">
                     <div className="member">
                         <img src={au} class="img-responsive img-thumbnail" alt="Responsive image" />
                         <div class="name">Austin Nguyen
-                        <br />Engineer</div> 
+                        <br />Software Engineer</div> 
                     </div>
                     <div className="member">
                         <img src={hu} class="img-responsive img-thumbnail" alt="Responsive image" />
                         <div class="name">Huey Nguyen
-                        <br />Description</div> 
+                        <br />Software Engineer</div> 
                     </div>
                     <div className="member">
                         <img src={ad} class="img-responsive img-thumbnail" alt="Responsive image" />
                         <div class="name">Andy Ho
-                        <br />Description</div> 
+                        <br />Software Engineer</div> 
                     </div>
                     <div className="member">
                         <img src={ppic} class="img-responsive img-thumbnail" alt="Responsive image" />
