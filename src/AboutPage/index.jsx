@@ -1,5 +1,8 @@
 import React from "react";
 import './index.css';
+import au from './austin.png';
+import ad from './andy.png';
+import hu from './huey.png';
 import ppic from './profile-pic.png';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -42,18 +45,18 @@ const AboutPage = () =>{
                 <h2 className="title-3">Meet the Team!</h2>
                 <div className="team-members">
                     <div className="member">
-                        <img src={ppic} class="img-responsive img-thumbnail" alt="Responsive image" />
+                        <img src={au} class="img-responsive img-thumbnail" alt="Responsive image" />
                         <div class="name">Austin Nguyen
                         <br />Engineer</div> 
                     </div>
                     <div className="member">
-                        <img src={ppic} class="img-responsive img-thumbnail" alt="Responsive image" />
-                        <div class="name">Name
+                        <img src={hu} class="img-responsive img-thumbnail" alt="Responsive image" />
+                        <div class="name">Huey Nguyen
                         <br />Description</div> 
                     </div>
                     <div className="member">
-                        <img src={ppic} class="img-responsive img-thumbnail" alt="Responsive image" />
-                        <div class="name">Name
+                        <img src={ad} class="img-responsive img-thumbnail" alt="Responsive image" />
+                        <div class="name">Andy Ho
                         <br />Description</div> 
                     </div>
                     <div className="member">
