@@ -1,3 +1,4 @@
+import i32 from "./images/image32.png"
 const modules = [
     
         {
@@ -8,10 +9,16 @@ const modules = [
             subtopics: [
                 {
                     title: "Supply and Demand Law",
-                    description: "The law of supply and demand is a theory that explains how the market is controlled by buyers and sellers interactions with a stock. The price of a stock is determined by the willingness of people to buy or sell that share."
+                    description: "The law of supply and demand is a theory that explains how the market is controlled by buyers and sellers interactions with a stock. The price of a stock is determined by the willingness of people to buy or sell that share.",
+                    images: [
+                        {
+                            image: "i32",
+                            caption: "Golden Cross (Bullish Cross)",
+        
+                        },
+                    ]
                 }
             ],
-            images: "something"
         },
 
         {
@@ -43,7 +50,12 @@ const modules = [
             id: 3,
             title: "Technical Analysis",    
             description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus necessitatibus pariatur quod cum, neque deleniti dignissimos reprehenderit dolores ab alias iusto beatae tenetur minus ipsum ullam deserunt voluptas nihil.",
-            hasList: false,
+            hasList: true,
+            takeaways: ["Exponential moving averages are designed to see price trends over specific time frames such as 50 or 200 days.",
+            "Compared to simple moving averages, EMAs give greater weight to recent (more relevant) data.",
+            "Computing the exponential moving average involves applying a multiplier to the SMA (simple moving average).",
+            "Moving average ribbons allow traders to see multiple EMAs at the same time.",
+            "EMA positioning varies on time frames (The bigger the time frame, the more important the level)."],
             subtopics: [
                 {
                     title: "EMA",
