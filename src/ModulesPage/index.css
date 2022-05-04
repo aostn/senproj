@@ -4,7 +4,11 @@
 }
 
 .modules-content{
-    height: 100vh;
+    height: auto;
+    min-height: 60vh;
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 .table-of-contents_container{
@@ -14,11 +18,11 @@
     
 }
 
-.modules__container, .sub-topic__container{
+.modules__text, .modules__header, .modules__container, .sub-topic__container, .sub-topic__text, .sub-topic-header{
     display: flex;
     flex-direction: column;
     margin-right: 5%;
-    /* margin-left: 5%; */
+    margin-left: 2%;
 }
 
 .modules__header{
@@ -60,6 +64,10 @@
     list-style-type: circle;
     padding: 10;
     /* margin-bottom: 2%; */
+}
+
+.modules-welcome{
+    margin: 10px;
 }
 
 .modules-nav__items:not(:last-child){

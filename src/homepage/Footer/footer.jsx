@@ -26,7 +26,7 @@ const Footer = () =>{
             </div>
             
             <div className="links">
-                <ul>
+                <ul className="foot-items">
                     <li className="foot-link"><a href="/modules">Modules</a></li>   
                     <li className="foot-link"><a href="/about">About Us</a></li>
                     <li className="foot-link"><a href="/discord">Discord Bot</a></li>

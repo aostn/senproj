@@ -1,4 +1,3 @@
-import i32 from "./images/image32.png"
 const modules = [
     
         {
@@ -12,7 +11,7 @@ const modules = [
                     description: "The law of supply and demand is a theory that explains how the market is controlled by buyers and sellers interactions with a stock. The price of a stock is determined by the willingness of people to buy or sell that share.",
                     images: [
                         {
-                            image: "i32",
+                            image: "../images/image32.png",
                             caption: "Golden Cross (Bullish Cross)",
         
                         },
