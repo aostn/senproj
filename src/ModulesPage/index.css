@@ -18,7 +18,7 @@
     
 }
 
-.modules__text, .modules__header, .modules__container, .sub-topic__container, .sub-topic__text, .sub-topic-header{
+.modules__text, .modules__header, .modules__container, .sub-topic__container, .sub-topic__text, .sub-topic-header, .module__takeaways{
     display: flex;
     flex-direction: column;
     margin-right: 5%;

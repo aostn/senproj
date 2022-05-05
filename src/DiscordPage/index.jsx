@@ -40,6 +40,7 @@ import SsidChartIcon from '@mui/icons-material/SsidChart';
 import NotesIcon from '@mui/icons-material/Notes';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import WaterfallChartIcon from '@mui/icons-material/WaterfallChart';
+import Button from '@mui/material/Button';
 
 const commonStyles = {
   m: 1,
@@ -67,7 +68,31 @@ const DiscordPage = () =>{
             <h1 className="DiscordPageTitle">Tickr Discord Bot</h1>
             <p className="tickrDescription">Tickr Bot is a helpful tool to help you learn about the stock market! Our bot provides the most up-to-date data on the market using FinViz APIs. Our bot provides our users with an intuitive and user-friendly experience that can be used on any Discord server! Below you can find the information on how to install our bot, the commands, and each of the updates our bot has received. If there are any questions about our bot feel free to contact us and let us know!<br />
                 {/* <br /><strong>Our current features for the bot:</strong> */}
+                <br /><br />
+                <div className="tickr-addbot">
+                {/* <h2 className="tickr-addbotTitle">Tickr Bot:</h2> */}
+                <div className="tickr-addbotButton">
+                  <Button className="disc_btn" 
+                          variant="contained" 
+                          size="large" 
+                          href="https://discord.com/oauth2/authorize?client_id=949120643557900328&permissions=1152125172800&scope=bot" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          style={{
+                            backgroundColor: "#A4A4A4",
+                            '&:hover':{
+                              backgroundColor: "#7e7e7e"
+                            }}}>
+                    CLICK TO ADD BOT
+                  </Button>
+                </div>
+              </div>
+              <br />
               </p>
+              <br /><br />
+
+              
+
               <h3 className="tickrBotFeature">Our current features for the bot:</h3>
           </div>
 
@@ -113,6 +138,8 @@ const DiscordPage = () =>{
                     <Divider />
                 </Box>
           </div>
+
+          
 
           <br /><br />
           <div className="ticker-commands">

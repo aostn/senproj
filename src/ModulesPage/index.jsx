@@ -87,9 +87,9 @@ const Module = ({module}) =>{
             ))}
 
             {hasList && (
-                <div>
+                <div className="module__takeaways">
                     <h3>Key Takeaways</h3>
-                    <ol>
+                    <ol >
                         {module?.takeaways?.map((takeaway) => <li>{takeaway}</li>)}
                     </ol>
                 </div>
