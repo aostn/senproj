@@ -229,7 +229,7 @@ const ContactPage = () =>{
                   </Box>
                   <div>
                 <Stack direction="row" spacing={3}>
-                  <Button variant="contained" endIcon={<SendIcon />}>
+                  <Button variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "#A4A4A4"}}> 
                     Send
                   </Button>
                 </Stack>

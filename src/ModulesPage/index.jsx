@@ -59,7 +59,7 @@ const TableOfContents = ( {setModuleToShow,setShowModuleCompoenent}) => {
                     margin: '2%'
                 
                 }}>
-                <ul>
+                <ul className="toc-content">
                     {modules.map(module => (
                     <RenderRow 
                         module={module} 
@@ -87,9 +87,9 @@ const Module = ({module}) =>{
             ))}
 
             {hasList && (
-                <div>
+                <div className="module__takeaways">
                     <h3>Key Takeaways</h3>
-                    <ol>
+                    <ol >
                         {module?.takeaways?.map((takeaway) => <li>{takeaway}</li>)}
                     </ol>
                 </div>
@@ -117,7 +117,7 @@ const SubTopic = ({subTopic, hasList}) => {
                 <div>
                     {subTopic?.images?.map(image => 
                         <div>
-                            <img src={image}/>
+                            <img src={image.image}/>
                             {image.caption ?? <p>{image.caption}</p>}    
                         </div>
                     )}
@@ -132,13 +132,14 @@ const SubTopic = ({subTopic, hasList}) => {
 // };
 
 const ModulesWelcomePage = () =>(
-    <div>
-        <h1>Welcome to the Learning Modules Section</h1>
+    <div className="modules-welcome">
+        <h1>Welcome to the Learning Modules Section!</h1>
         <p>
-            We offer a number of leanring modules. Please select one from the side menue to being your stock learning journey.
+            We understamd that learning about stocks can be overwhelming, so we are here to make it a little easier to get the ball rolling. 
+            We offer a number of leanring modules. Please select one lessons from the side menu to begin your stock learning journey.
         </p>
         <p>
-            We recommend starting with these 3 modules
+            We recommend starting with these 3 modules:
         </p>
     </div>
 )

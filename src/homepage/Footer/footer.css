@@ -1,6 +1,6 @@
 .footer-section{
     background-color: #2E3B55;
-    padding: 50px;
+    padding: 35px;
     color: white;
     bottom: 0px;
     display: flex;
@@ -34,18 +34,19 @@
     font-size: 14px;
 }
 
-ul{
+.foot-items{
     list-style-type: none;
     align-items: center;
     text-decoration: none;
 }
 
-li{
-    align-items: center;
-    min-width:100px;
+.toc-content{
+    list-style: none;
 }
 
 .foot-link{
+    align-items: center;
+    min-width:100px;
     padding-bottom: 10px;
     text-decoration: none;
 }
