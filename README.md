@@ -1,4 +1,4 @@
-## Tickr Website - CMPE195 Senior Project 
+## Tickr Website
 
 Tickr is a stock learning application. This is the website that contains the learning modules, application details, and installation. 
 
