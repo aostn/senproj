@@ -46,11 +46,11 @@ const ContactPage = () =>{
          <div className="ContagePageMain">
             <h1 className="ContactUsTitle">Contact Us</h1>
             <p className="ContactDesc">Thank you for your interest in the TickrBot. If you have any further questions or concerns, please feel free to contact us below.<br />
-                <br /><strong></strong>
+                {/* <br /><strong></strong> */}
               </p>
           </div>
         <div className="ContactSection">
-        <div className="ContactPageInfo">
+        {/* <div className="ContactPageInfo">
             <Box sx={{ ...commonStyles, width: '100%', maxWidth: 360, bgcolor: 'background.paper', borderRadius: '8px', borderColor: "grey.100"}}>
                     <List>
                       <ListItem disablePadding>
@@ -91,9 +91,9 @@ const ContactPage = () =>{
                     </List>
                     <Divider />
                 </Box>
-          </div>
+          </div> */}
 
-          <br /><br />
+          {/* <br /><br /> */}
 
         </div>
         <div className="individContact">
@@ -115,8 +115,6 @@ const ContactPage = () =>{
                   <Typography>
                     <strong>Email: </strong>
                     <br />austin.nguyen@sjsu.edu<br />
-                    <strong>Phone:</strong>
-                    <br /> [REDACTED]<br />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -135,8 +133,6 @@ const ContactPage = () =>{
                   <Typography>
                   <strong>Email: </strong>
                     <br />huey.nguyen@sjsu.edu<br />
-                    <strong>Phone:</strong>
-                    <br /> [REDACTED]<br />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -155,8 +151,6 @@ const ContactPage = () =>{
                   <Typography>
                     <strong>Email: </strong>
                     <br />andy.q.ho@sjsu.edu<br />
-                    <strong>Phone:</strong>
-                    <br /> [REDACTED]<br />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -175,8 +169,6 @@ const ContactPage = () =>{
                   <Typography>
                   <strong>Email: </strong>
                     <br />nathan.le@sjsu.edu<br />
-                    <strong>Phone:</strong>
-                    <br /> [REDACTED]<br />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -227,9 +219,9 @@ const ContactPage = () =>{
                     </div>
                     <br />
                   </Box>
-                  <div>
+                  <div  className="sub_btn">
                 <Stack direction="row" spacing={3}>
-                  <Button variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "#A4A4A4"}}> 
+                  <Button  variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "#A4A4A4"}}> 
                     Send
                   </Button>
                 </Stack>
