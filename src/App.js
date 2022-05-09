@@ -16,7 +16,13 @@ const renderPath = () =>{
     return <Homepage />;
   } else if (window.location.pathname === '/modules'){
     return <ModulesPage />;
-  } else if (window.location.pathname === '/about'){
+  } else if (window.location.pathname === '/modules/1'){
+    return <ModulesPage homepageId={1}/>;
+  }else if (window.location.pathname === '/modules/2'){
+    return <ModulesPage homepageId={2}/>;
+  }else if (window.location.pathname === '/modules/4'){
+    return <ModulesPage homepageId={4}/>;
+  }else if (window.location.pathname === '/about'){
     return <AboutPage />;
   } else if (window.location.pathname === '/discord'){
     return <DiscordPage />;

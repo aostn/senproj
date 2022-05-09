@@ -51,12 +51,14 @@ const RenderRow = ({module, setModuleToShow, setShowModuleCompoenent}) => {
 const TableOfContents = ( {setModuleToShow,setShowModuleCompoenent}) => {
 
     return (
-        <Box sx={{ width: '100%', 
-                    height: '50%', 
+        <Box sx={{  height: '60%', 
                     maxWidth: '20%', 
                     bgcolor: 'background.paper', 
                     borderStyle: 'solid', 
-                    margin: '2%'
+                    margin: '2%',
+                    minWidth: '20%',
+                    position: 'sticky',
+                    top: '5px',
                 
                 }}>
                 <ul className="toc-content">
@@ -116,9 +118,9 @@ const SubTopic = ({subTopic, hasList}) => {
 
                 <div>
                     {subTopic?.images?.map(image => 
-                        <div>
-                            <img src={image.image}/>
-                            {image.caption ?? <p>{image.caption}</p>}    
+                        <div className="sub-topic__image__sec">
+                            <img className="sub-topic__images" src={image.image} />
+                            {image.caption ?? <p className="sub-topic__cap">{image.caption}</p>}    
                         </div>
                     )}
                 </div>
@@ -146,11 +148,36 @@ const ModulesWelcomePage = () =>(
 
 console.log(modules);
 
-const ModulesPage = () => {
+const ModulesPage = ({ homepageId }) => {
     const [showModuleComponent, setShowModuleCompoenent] = useState(false);
     const [moduleToShow , setModuleToShow] = useState(null);
     const subTopicRef = useRef(null);
  
+    // const fromHomePage = () =>{
+        
+
+    //     if((module === 1) || (module === 2) | (module === 3)){
+    //         modules.find(
+    //                 (module) => module.id === homepageId, <Module module={module}/>)
+            
+    //     } else{
+    //         showModuleComponent ? 
+    //             <Module module={moduleToShow} /> : <ModulesWelcomePage />
+    //     }
+    // };
+    const renderFromLink = () =>{
+        const foundModule =  modules.find((foundModule) => foundModule.id === homepageId);
+        return <Module module={foundModule}/>
+    };
+
+    const renderHomePage = () =>{
+        
+            showModuleComponent ? (
+                <Module module={moduleToShow} />) 
+                : (<ModulesWelcomePage />
+            );  
+    };
+
     return(
         <div className="modules-page">
             <TableOfContents 
@@ -160,9 +187,7 @@ const ModulesPage = () => {
             />
             <div className="modules-content">
                 <div classnName="content">
-                    {showModuleComponent ? 
-                        <Module module={moduleToShow} /> : <ModulesWelcomePage />
-                    }
+                    {homepageId ? renderFromLink() : renderHomePage() }
                 </div>
                 
             </div>
