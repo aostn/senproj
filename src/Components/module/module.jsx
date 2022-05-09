@@ -9,9 +9,9 @@ import Grid from '@mui/material/Grid';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-// import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
 import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
+import {Link} from "react-router-dom" ;
 
 // import React from "react";
 // import './module.css'
@@ -23,9 +23,9 @@ import Radio from '@mui/material/Radio';
 //             <header className="title">Our Most Popular Learning Modules</header>
 //             <ul className="itemsList">
 //                 <div className="item">
-//                     <li className="item1"><a href="/modules"><h3>Module 1:</h3> {module.title}</a></li>
-//                     <li className="item2"><a href="/modules"><h3>Module 2:</h3> {module.title}</a></li>
-//                     <li className="item3"><a href="/modules"><h3>Module 3:</h3> {module.title}</a></li>
+//                     <li className="item1"><a href="/modules"><h3>Module 1:</h3>Intro to Stocks</a></li>
+//                     <li className="item2"><a href="/modules"><h3>Module 2:</h3>Intro to Stocks</a></li>
+//                     <li className="item3"><a href="/modules"><h3>Module 3:</h3>Intro to Stocks</a></li>
 //                 </div>
 //             </ul>
 //         </div>
@@ -93,7 +93,8 @@ export default function SpacingGrid() {
                             }}
                             className="item1"
                         >
-                            <li className="item1"><a href="/modules"><h3>Module 1:</h3> {module.title}</a></li>
+
+                            <li className="item1"><a href="/modules/1"><h3>Module 1:</h3>Intro to Stocks</a></li>
                         </Paper>
                     </Grid>
                     <Grid key={1} item className="module-box">
@@ -106,7 +107,8 @@ export default function SpacingGrid() {
                             }}
                             className="item2"
                         >
-                            <li className="item2"><a href="/modules"><h3>Module 2:</h3> {module.title}</a></li>
+
+                            <li className="item2"><a href="/modules/2"><h3>Module 2:</h3>Intro to Options</a></li>
                         </Paper>
                     </Grid>      
                     <Grid key={2} item className="module-box">
@@ -119,7 +121,8 @@ export default function SpacingGrid() {
                             }}
                             className="item3"
                         >
-                            <li className="item3"><a href="/modules"><h3>Module 3:</h3> {module.title}</a></li>
+
+                            <li className="item3"><a href="/modules/4"><h3>Module 3:</h3>Technical Analysis</a></li>
                         </Paper>
                     </Grid>              
                 </Grid>
