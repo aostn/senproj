@@ -13,6 +13,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import {Link} from "react-router-dom" ;
 import { useLocation } from 'react-router-dom';
+import { fontSize } from '@mui/system';
 
 // import React from "react";
 // import './module.css'
@@ -94,7 +95,7 @@ export default function SpacingGrid() {
                             }}
                             className="item1"
                         >
-                            <Link to="/modules" state={{moduleId : 1}}  >Module 1: <br/> Intro to Stocks</Link>
+                            <Link to="/modules" state={{moduleId : 1}} ><h3>Module 1:</h3> <br/>Intro to Stocks</Link>
                             {/* <li className="item1"><a href="/modules/1"><h3>Module 1:</h3>Intro to Stocks</a></li> */}
                         </Paper>
                     </Grid>
@@ -108,7 +109,7 @@ export default function SpacingGrid() {
                             }}
                             className="item2"
                         >
-                            <Link to="/modules" state={{moduleId : 2}} > Module 2:<br/> Intro to Options</Link>
+                            <Link to="/modules" state={{moduleId : 2}} > <h3>Module 2:</h3> <br/> Intro to Options</Link>
                             {/* <li className="item2"><a href="/modules/2"><h3>Module 2:</h3>Intro to Options</a></li> */}
                         </Paper>
                     </Grid>      
@@ -122,7 +123,7 @@ export default function SpacingGrid() {
                             }}
                             className="item3"
                         >
-                            <Link to="/modules" state={{moduleId : 3}}  >Module 3: <br/> Technical Analysis</Link>
+                            <Link to="/modules" state={{moduleId : 3}}  ><h3>Module 3:</h3>  <br/> Technical Analysis</Link>
                             {/* <li className="item3"><a href="/modules/4"><h3>Module 3:</h3>Technical Analysis</a></li> */}
                         </Paper>
                     </Grid>              
