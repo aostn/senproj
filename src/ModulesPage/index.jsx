@@ -4,6 +4,7 @@ import './index.css'
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const RenderRow = ({module, setModuleToShow, setShowModuleCompoenent}) => {
 
@@ -169,6 +170,20 @@ const ModulesPage = ({ props }) => {
     //     return <Module module={foundModule}/>
 
     // };
+
+    const location = useLocation();
+
+    console.log(location);
+    
+    useEffect(() =>{
+        if(location.state ){
+            const foundModule = modules.find(
+                (foundModule) => foundModule.id ===location.state.moduleId
+            );
+            setModuleToShow(foundModule)
+            setShowModuleCompoenent(true)
+        }
+    }, []);
 
     const RenderHomePage = () =>{
             return showModuleComponent ? (

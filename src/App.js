@@ -11,39 +11,39 @@ import ContactPage from './ContactPage';
 import { Router } from 'react-router-dom';
 
 
-const renderPath = () =>{
-  if(window.location.pathname === '/'){
-    return <Homepage />;
-  } else if (window.location.pathname === '/modules'){
-    return <ModulesPage />;
-  } else if (window.location.pathname === '/modules/1'){
-    return <ModulesPage homepageId={1}/>;
-  }else if (window.location.pathname === '/modules/2'){
-    return <ModulesPage homepageId={2}/>;
-  }else if (window.location.pathname === '/modules/4'){
-    return <ModulesPage homepageId={4}/>;
-  }else if (window.location.pathname === '/about'){
-    return <AboutPage />;
-  } else if (window.location.pathname === '/discord'){
-    return <DiscordPage />;
-  } else if (window.location.pathname === '/contact'){
-    return <ContactPage />;
-  }
-}
+// const renderPath = () =>{
+//   if(window.location.pathname === '/'){
+//     return <Homepage />;
+//   } else if (window.location.pathname === '/modules'){
+//     return <ModulesPage />;
+//   } else if (window.location.pathname === '/modules/1'){
+//     return <ModulesPage homepageId={1}/>;
+//   }else if (window.location.pathname === '/modules/2'){
+//     return <ModulesPage homepageId={2}/>;
+//   }else if (window.location.pathname === '/modules/4'){
+//     return <ModulesPage homepageId={4}/>;
+//   }else if (window.location.pathname === '/about'){
+//     return <AboutPage />;
+//   } else if (window.location.pathname === '/discord'){
+//     return <DiscordPage />;
+//   } else if (window.location.pathname === '/contact'){
+//     return <ContactPage />;
+//   }
+// }
  
 
-function App() {
-  return (
-    <div>
-      <Nav />
-      {renderPath()}
-      <Footer />
-    </div>
-  );
-}
-
-// function App(){
-//   return <div>{renderPath()}</div>;
+// function App() {
+//   return (
+//     <div>
+//       <Nav />
+//       {renderPath()}
+//       <Footer />
+//     </div>
+//   );
 // }
 
-export default App;
+// // function App(){
+// //   return <div>{renderPath()}</div>;
+// // }
+
+// export default App;
