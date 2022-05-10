@@ -131,7 +131,7 @@ const SubTopic = ({subTopic, hasList}) => {
                     {subTopic?.images?.map(image => 
                         <div className="sub-topic__image__sec">
                             <img className="sub-topic__images" src={image.image} />
-                            {image.caption ?? <p className="sub-topic__cap">{image.caption}</p>}    
+                            <p className="sub-topic__cap">{image.caption}</p> 
                         </div>
                     )}
                 </div>
@@ -151,9 +151,7 @@ const ModulesWelcomePage = () =>(
             We understamd that learning about stocks can be overwhelming, so we are here to make it a little easier to get the ball rolling. 
             We offer a number of learning modules. Please select one lessons from the side menu to begin your stock learning journey.
         </p>
-        <p>
-            We recommend starting with these 3 modules:
-        </p>
+        <img></img>
     </div>
 )
 

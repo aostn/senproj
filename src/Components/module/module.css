@@ -39,6 +39,8 @@
 }
 
 .item1, .item2, .item3 {
+    margin-left: 10px;
+    margin-right: 10px;
     background-image: url(chart.jpg);
     background-repeat: no-repeat;
     background-size: 150%;
