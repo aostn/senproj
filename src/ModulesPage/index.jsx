@@ -3,6 +3,7 @@ import modules from "./modules";
 import './index.css'
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 
 const RenderRow = ({module, setModuleToShow, setShowModuleCompoenent}) => {
 
@@ -13,19 +14,30 @@ const RenderRow = ({module, setModuleToShow, setShowModuleCompoenent}) => {
     //     setShowSubTopic(!showSubTopic);
     // }
 
+    const checkForQuertParam = () => {
+        let string = window.location.pathname;
+
+        if(Number(string[string.length - 1])){
+            const newStr = string.replace(`/${string[string.length - 1]}`, "");
+            window.location.pathname = newStr;
+        }
+    };
     const scrollTo = (el) => {
         let element = document.getElementById(el);
-        element.scrollIntoView({behavior : "smooth"});
+        element?.scrollIntoView({behavior : "smooth"});
 
         
     };
 
     const handleTitleClick = () =>{
+        checkForQuertParam();
+
         setModuleToShow(module);
         setShowModuleCompoenent(true);
     };
 
     const handleSubTopicClick = (el) =>{
+        checkForQuertParam();
         setModuleToShow(module);
         setShowModuleCompoenent(true);
         setTimeout(() => scrollTo(el), 150);
@@ -112,8 +124,6 @@ const SubTopic = ({subTopic, hasList}) => {
             <h2 className="subtopic__title">{subTopic.title}</h2>
             <p className="subtopic__text">{subTopic.description}</p>
 
-            
-
             {subTopic.image ?? (
 
                 <div>
@@ -138,7 +148,7 @@ const ModulesWelcomePage = () =>(
         <h1>Welcome to the Learning Modules Section!</h1>
         <p>
             We understamd that learning about stocks can be overwhelming, so we are here to make it a little easier to get the ball rolling. 
-            We offer a number of leanring modules. Please select one lessons from the side menu to begin your stock learning journey.
+            We offer a number of learning modules. Please select one lessons from the side menu to begin your stock learning journey.
         </p>
         <p>
             We recommend starting with these 3 modules:
@@ -148,35 +158,32 @@ const ModulesWelcomePage = () =>(
 
 console.log(modules);
 
-const ModulesPage = ({ homepageId }) => {
+const ModulesPage = ({ props }) => {
     const [showModuleComponent, setShowModuleCompoenent] = useState(false);
     const [moduleToShow , setModuleToShow] = useState(null);
     const subTopicRef = useRef(null);
- 
-    // const fromHomePage = () =>{
-        
+    // const navigation = useNavigate();
 
-    //     if((module === 1) || (module === 2) | (module === 3)){
-    //         modules.find(
-    //                 (module) => module.id === homepageId, <Module module={module}/>)
-            
-    //     } else{
-    //         showModuleComponent ? 
-    //             <Module module={moduleToShow} /> : <ModulesWelcomePage />
-    //     }
+    // const renderFromLink = () =>{
+    //     // const foundModule =  modules.find((foundModule) => foundModule.id === homepageId);
+    //     return <Module module={foundModule}/>
+
     // };
-    const renderFromLink = () =>{
-        const foundModule =  modules.find((foundModule) => foundModule.id === homepageId);
-        return <Module module={foundModule}/>
-    };
 
-    const renderHomePage = () =>{
-        
-            showModuleComponent ? (
-                <Module module={moduleToShow} />) 
-                : (<ModulesWelcomePage />
-            );  
+    const RenderHomePage = () =>{
+            return showModuleComponent ? (
+                <Module module={moduleToShow} />
+            ): 
+                (<ModulesWelcomePage />);
+            
+            // showModuleComponent ? (
+            //     <Module module={moduleToShow} />) 
+            //     : (<ModulesWelcomePage />
+            // );  
     };
+    if(!module){
+        return;
+    }
 
     return(
         <div className="modules-page">
@@ -187,11 +194,10 @@ const ModulesPage = ({ homepageId }) => {
             />
             <div className="modules-content">
                 <div classnName="content">
-                    {homepageId ? renderFromLink() : renderHomePage() }
+                    <RenderHomePage />
                 </div>
                 
             </div>
-            
             
         </div>
     );
