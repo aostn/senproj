@@ -75,8 +75,7 @@ const AboutPage = () =>{
                     </div>
                     <div className="member">
                         <img src={ppic} class="img-responsive img-thumbnail" alt="Responsive image" />
-                        <div class="name">Nathan Le
-                        <br />Description</div> 
+                        <div class="name">Nathan Le<br/></div>
                     </div>
                 </div>
             </div>
